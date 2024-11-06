@@ -1,9 +1,6 @@
 #! /bin/bash
 ### Docker Setup ###
 
-sudo apt update -y
-sudo apt upgrade -y
-
 # Required Packages
 sudo apt-get install -y ca-certificates curl
 
@@ -19,6 +16,11 @@ echo \
 # Installing
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+# Set User to use Docker without Root
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+
 # Test if it runs
 echo "[Docker Hello World Run]"
-sudo docker run hello-world
+docker run hello-world
