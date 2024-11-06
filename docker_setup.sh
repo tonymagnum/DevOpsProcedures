@@ -19,7 +19,3 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 # Set User to use Docker without Root
 sudo usermod -aG docker $USER
 newgrp docker
-
-# Test if it runs
-echo "[Docker Hello World Run]"
-docker run hello-world
