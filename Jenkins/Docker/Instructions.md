@@ -33,3 +33,7 @@ They will look similar to this and you will run them from your temrinal
     sudo java -jar agent.jar -url http://localhost:8080/ -secret <SECRET-PROVIDED> -name "vm-agent" -webSocket -workDir "/home/jenkins-agent"
 ```
 These download the Agent Info in a Jar file and then use it to connect
+
+### Pipeline Plugin
+Manage Jenkins > Plugins > Avaliable Plugins\
+Here search for `Pipeline` mark it and install
